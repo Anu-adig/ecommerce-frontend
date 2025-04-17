@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+  <!-- HEADER SECTION -->
   <header class="site-header">
-    <div class="product-grid"  id="product-grid">
-    </div>
-    
     <nav class="nav-menu" id="nav-menu">
       <ul>
         <li><a href="#">Home</a></li>
@@ -30,7 +28,42 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- PRODUCT GRID -->
+  <main>
+    <div class="product-grid" id="product-grid">
+      <a href="product.html?id=1" class="product-card">
+        <img src="images/product1.jpg" alt="Product 1">
+        <h2>Product Name</h2>
+      </a>
+    </div>
+
+    <a href="cart.html">Cart (<span id="cart-count-display">0</span>)</a>
+  </main>
+
+  <div class="image-container">
+    <img id="main-image" src="product.jpg" />
+    <div id="zoom-lens"></div>
+  </div>
+
+  <div class="variations">
+    <label>Size:</label>
+    <button onclick="selectVariation('size', 'M')">M</button>
+    <button onclick="selectVariation('size', 'L')">L</button>
+    <label>Color:</label>
+    <button onclick="selectVariation('color', 'Red')">Red</button>
+    <button onclick="selectVariation('color', 'Blue')">Blue</button>
+  </div>
+  
+  <div class="quantity-selector">
+    <button onclick="changeQuantity(-1)">−</button>
+    <input type="number" id="qty" value="1" readonly>
+    <button onclick="changeQuantity(1)">+</button>
+  </div>
+  <p>Total Price: ₹<span id="total-price">999</span></p>
+
+  <button onclick="addToCart()">Add to Cart</button>
+
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-content">
       <img src="assets/sale-banner.webp" alt="Sale Banner" loading="lazy" />
@@ -40,6 +73,7 @@
     </div>
   </section>
 
+  <!-- JS SCRIPTS -->
   <script src="scripts/app.js"></script>
 </body>
 </html>
