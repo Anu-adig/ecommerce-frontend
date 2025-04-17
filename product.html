@@ -1,0 +1,21 @@
+<body>
+    <div id="header-placeholder"></div>
+  
+    <main id="product-detail-container">
+      <!-- Product-specific content -->
+    </main>
+  
+    <div id="footer-placeholder"></div>
+  
+    <script>
+      // Load header and footer dynamically
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+  </body>
+  
