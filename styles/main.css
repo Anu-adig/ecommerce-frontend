@@ -96,3 +96,39 @@
   background-color: #ff7e5f;
   color: white;
 }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-image {
+  width: 400px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+  .main-image {
+    width: 100%;
+  }
+}
+.image-container {
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+}
+#zoom-lens {
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+  background-color: #fff;
+  display: none;
+  pointer-events: none;
+}
+
+
+
